@@ -17,7 +17,7 @@ This repository contains a lab setup for deploying a high availability (HA) arch
 
 ## Architectural Diagram 
  
-![Architecture Diagram](HA-Lab.drawio.png.png) 
+![Architecture Diagram](./docs/images/HA-Lab.drawio.png) 
 
 
 
@@ -35,6 +35,16 @@ This repository contains a lab setup for deploying a high availability (HA) arch
 git clone https://github.com/wsyp1123/terraform-ha-lab.git
 cd terraform-ha-lab
 ```
+
+Before running `terraform init`, you must modify the S3 bucket name in the `backend/s3.tf` file.
+
+#### Steps to Update S3 Bucket Name
+- Locate the `backend/s3.tf` file in your project directory.
+- Find the bucket name.
+- Replace the existing bucket name with a unique name. Ensure the name is globally unique across AWS.
+
+
+
 2. Initialize Terraform
 ```bash
 terraform init 
@@ -50,9 +60,9 @@ terraform apply -auto-approve
 
 ## Verifying Deployment
 ### Steps
-1. After running terraform apply, copy the Load Balancer DNS name from output
-2. Open the copied DNS name in a web browser
-3. Verify Nginx default page is displayed
+1. After running terraform apply, copy the Load Balancer DNS name from output.
+2. Open the copied DNS name in a web browser.
+3. Verify Nginx default page is displayed.
 
 ```bash
 Welcome to nginx!
