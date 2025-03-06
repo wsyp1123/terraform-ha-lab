@@ -36,10 +36,10 @@ git clone https://github.com/wsyp1123/terraform-ha-lab.git
 cd terraform-ha-lab
 ```
 
-Before running `terraform init`, you must modify the S3 bucket name in the `backend/s3.tf` file.
+Before running `terraform init`, modify the S3 bucket name in the `backend/s3.tf` and `provider.tf` because it is globally unique across all AWS accounts and regions.
 
 #### Steps to Update S3 Bucket Name
-- Locate the `backend/s3.tf` file in your project directory.
+- Locate the `backend/s3.tf provider.tf`  in your project directory.
 - Find the bucket name.
 - Replace the existing bucket name with a unique name. Ensure the name is globally unique across AWS.
 
